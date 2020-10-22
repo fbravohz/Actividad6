@@ -1,0 +1,12 @@
+package com.mycompany.cjactividad6;
+/**
+ *
+ * @author fbrav
+ */
+public class Main {
+     public static void main(String[]args){
+        Actividad6 a = new Actividad6("Felipe Bravo");
+        a.setCalificaciones(78, 85, 96, 100, 100);
+        a.resultados(a.getNombre(),a.getCalificaciones(), a.calcularPromedio(a.getCalificaciones()), a.asignarCalificacion(a.calcularPromedio(a.getCalificaciones())));
+    }
+}
