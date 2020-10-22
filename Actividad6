@@ -1,0 +1,58 @@
+package com.mycompany.cjactividad6;
+/**
+ *
+ * @author fbrav
+ */
+public class Actividad6 {
+    private String nombre;
+    private float[] calificaciones = {56,67,89,95,100};
+ 
+    public Actividad6(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public String getNombre(){
+        return nombre;
+    }
+
+    public void setCalificaciones(int calificacion1, int calificacion2, int calificacion3,
+            int calificacion4,int calificacion5 ){
+        calificaciones[0] = calificacion1;
+        calificaciones[1] = calificacion2;
+        calificaciones[2] = calificacion3;
+        calificaciones[3] = calificacion4;
+        calificaciones[4] = calificacion5;
+    }
+    public float[] getCalificaciones(){
+        
+        return this.calificaciones;
+    }
+    
+    public float calcularPromedio(float[] calificaciones){
+        float calificacionPromedio = (calificaciones[0] + calificaciones[1] + 
+                calificaciones[2]+ calificaciones[3] + calificaciones[4])/5;
+        return calificacionPromedio;
+    }
+    public char asignarCalificacion(float calificacionPromedio){
+        char calificacionAsignada = ' ';
+        if (calificacionPromedio <= 50) calificacionAsignada = 'F';
+        if (calificacionPromedio > 50 && calificacionPromedio <= 60) calificacionAsignada = 'E';
+        if (calificacionPromedio > 60 && calificacionPromedio <= 70) calificacionAsignada = 'D';
+        if (calificacionPromedio > 70 && calificacionPromedio <= 80) calificacionAsignada = 'C';
+        if (calificacionPromedio > 80 && calificacionPromedio <= 90) calificacionAsignada = 'B';
+        if (calificacionPromedio > 90 && calificacionPromedio <= 100) calificacionAsignada = 'A';
+        return calificacionAsignada;
+    }
+    
+    public void resultados(String nombre, float[] calificaciones, float calificacionPromedio, char calificacionAsignada){
+        System.out.println("Nombre del estudiante: " + nombre);
+        System.out.println("Calificación 1: " + calificaciones[0]);
+        System.out.println("Calificación 2: " + calificaciones[1]);
+        System.out.println("Calificación 3: " + calificaciones[2]);
+        System.out.println("Calificación 4: " + calificaciones[3]);
+        System.out.println("Calificación 5: " + calificaciones[4]);
+        System.out.println("Promedio: " + calificacionPromedio);
+        System.out.println("Calificacion: " + calificacionAsignada);
+    }
+
+}
